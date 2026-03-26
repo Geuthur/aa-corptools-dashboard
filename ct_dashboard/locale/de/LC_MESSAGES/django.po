@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: AA Corptools Dashboard \n"
+"Report-Msgid-Bugs-To: https://github.com/Geuthur/aa-corptools-dashboard/issues\n"
+"POT-Creation-Date: 2026-03-26 14:37+0100\n"
+"PO-Revision-Date: 2025-10-16 06:18+0000\n"
+"Last-Translator: Weblate Admin <geuthur@users.noreply.weblate.voices-of-war."
+"de>\n"
+"Language-Team: German <https://weblate.voices-of-war.de/projects/"
+"allianceauth/aa-memberaudit-dashboard/de/>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13.3\n"
+
+#: ct_dashboard/templates/ct_dashboard/dashboard.html:8
+msgid "Character Checks"
+msgstr "Charakter Prüfung"
+
+#: ct_dashboard/templates/ct_dashboard/dashboard.html:16
+msgid "Name"
+msgstr "Name"
+
+#: ct_dashboard/templates/ct_dashboard/dashboard.html:17
+msgid "Information"
+msgstr "Information"
+
+#: ct_dashboard/templates/ct_dashboard/dashboard.html:18
+msgid "Status"
+msgstr "Status"
+
+#: ct_dashboard/templates/ct_dashboard/dashboard.html:43
+#, fuzzy, python-format
+#| msgid "Some characters are not registered in %(memberaudit_app_name)s."
+msgid "Some characters are not registered in %(corptools_app_name)s."
+msgstr "Einige Charaktere sind in %(memberaudit_app_name)s nicht registriert."
+
+#: ct_dashboard/templates/ct_dashboard/dashboard.html:48
+#, fuzzy, python-format
+#| msgid "Go to %(memberaudit_app_name)s"
+msgid "Go to %(corptools_app_name)s"
+msgstr "Gehen Sie zu %(memberaudit_app_name)s"
+
+#: ct_dashboard/templates/ct_dashboard/dashboard.html:56
+#, fuzzy, python-format
+#| msgid "All characters are registered in %(memberaudit_app_name)s."
+msgid "All characters are registered in %(corptools_app_name)s."
+msgstr "Alle Charaktere sind in %(memberaudit_app_name)s registriert."
+
+#: ct_dashboard/views.py:35
+msgid "Character Registration Issue"
+msgstr "Charakter Registration Problem"
+
+#: ct_dashboard/views.py:41
+#, fuzzy, python-brace-format
+#| msgid "Character is not registered in {memberaudit_app_name}."
+msgid "Character is not registered in {corptools_app_name}."
+msgstr "Charakter ist nicht registriert in {memberaudit_app_name}."
+
+#: ct_dashboard/views.py:48
+msgid "Character Update Issue"
+msgstr "Charakter Update Problem"
+
+#: ct_dashboard/views.py:54
+msgid ""
+"Please re-register this character, as there was an issue with the last "
+"update."
+msgstr ""
+"Bitte registriere diesen Charakter erneut, ein problem trat beim letzten "
+"update auf."
