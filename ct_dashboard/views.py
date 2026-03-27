@@ -23,15 +23,18 @@ def dashboard_corptools_check(request):
         character__character_id__in=known_character_ids
     )
     character_ids = characters.values_list("character__character_id", flat=True)
-    issues_characters = characters.filter(active=0)
+
+    characters_with_issues: list[CharacterAudit] = []
+    # Check if characters are active this will trigger the is_active function which will check if the character is active and update the last_active field in the database, if there is an issue with the character it will be marked as inactive and show a warning in the dashboard
+    for character in characters:
+        if not character.is_active():
+            characters_with_issues.append(character)
+
     unregistered_characters = known_characters.exclude(
         character__character_id__in=character_ids
     )
 
     chars = {}
-    # Check if characters are active this will trigger the is_active function which will check if the character is active and update the last_active field in the database, if there is an issue with the character it will be marked as inactive and show a warning in the dashboard
-    for character in characters:
-        character.is_active()
 
     if characters:
         for char in unregistered_characters:
@@ -46,8 +49,8 @@ def dashboard_corptools_check(request):
                 "icon": format_html(msg),
             }
 
-    if issues_characters:
-        for issue in issues_characters:
+    if characters_with_issues:
+        for issue in characters_with_issues:
             title = _("Character Update Issue")
             msg = f"<span class='text-warning'><i class='fas fa-triangle-exclamation' data-bs-tooltip='aa-corptools-dashboard' title='{title}'></i></span>"
             chars[issue.character.character_id] = {
