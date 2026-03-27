@@ -24,19 +24,14 @@ def dashboard_corptools_check(request):
     )
     character_ids = characters.values_list("character__character_id", flat=True)
     issues_characters = characters.filter(active=0)
-
     unregistered_characters = known_characters.exclude(
         character__character_id__in=character_ids
     )
 
     chars = {}
-    logger.info(
-        f"Found {characters.count()} characters in CharacterAudit for user {request.user.username}"
-    )
+    # Check if characters are active this will trigger the is_active function which will check if the character is active and update the last_active field in the database, if there is an issue with the character it will be marked as inactive and show a warning in the dashboard
     for character in characters:
-        logger.info(
-            f"Character {character.character.character_name} active status: {character.is_active()}"
-        )
+        character.is_active()
 
     if characters:
         for char in unregistered_characters:
