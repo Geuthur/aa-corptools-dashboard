@@ -48,10 +48,8 @@ urls.Homepage = "https://github.com/Geuthur/aa-corptools-dashboard"
 urls.Source = "https://github.com/Geuthur/aa-corptools-dashboard"
 urls.Tracker = "https://github.com/Geuthur/aa-corptools-dashboard/issues"
 
-[tool.hatch.build]
-include = [
+[tool.hatch]
+build.include = [
     "/ct_dashboard",
 ]
-
-[tool.hatch.version]
-path = "ct_dashboard/__init__.py"
+version.path = "ct_dashboard/__init__.py"
