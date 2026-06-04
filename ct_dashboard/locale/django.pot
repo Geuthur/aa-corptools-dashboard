@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: AA Corptools Dashboard \n"
+"Project-Id-Version: AA Corptools Dashboard 0.0.2\n"
 "Report-Msgid-Bugs-To: https://github.com/Geuthur/aa-corptools-dashboard/issues\n"
-"POT-Creation-Date: 2026-03-26 14:37+0100\n"
+"POT-Creation-Date: 2026-06-04 08:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,20 +48,20 @@ msgstr ""
 msgid "All characters are registered in %(corptools_app_name)s."
 msgstr ""
 
-#: ct_dashboard/views.py:35
+#: ct_dashboard/views.py:41
 msgid "Character Registration Issue"
 msgstr ""
 
-#: ct_dashboard/views.py:41
+#: ct_dashboard/views.py:47
 #, python-brace-format
 msgid "Character is not registered in {corptools_app_name}."
 msgstr ""
 
-#: ct_dashboard/views.py:48
+#: ct_dashboard/views.py:54
 msgid "Character Update Issue"
 msgstr ""
 
-#: ct_dashboard/views.py:54
+#: ct_dashboard/views.py:60
 msgid ""
 "Please re-register this character, as there was an issue with the last "
 "update."
