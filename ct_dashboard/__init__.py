@@ -1,6 +1,6 @@
 """Initialize the app"""
 
-__version__ = "0.0.2"
+__version__ = "0.1.0"
 __title__ = "Corptools Dashboard"
 
 __package_name__ = "aa-corptools-dashboard"
