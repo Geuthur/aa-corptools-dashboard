@@ -12,11 +12,11 @@ license = { file = "LICENSE" }
 authors = [
     { name = "Geuthur", email = "devgeuthur@gmail.com" },
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.10,<3.15"
 classifiers = [
     "Environment :: Web Environment",
     "Framework :: Django",
-    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.2",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Operating System :: OS Independent",
@@ -34,7 +34,7 @@ dynamic = [
     "version",
 ]
 dependencies = [
-    "allianceauth>=5",
+    "allianceauth>=5.2",
     "allianceauth-corptools",
 ]
 optional-dependencies.tests-allianceauth-latest = [
@@ -42,6 +42,7 @@ optional-dependencies.tests-allianceauth-latest = [
     "factory-boy",
 ]
 urls.Changelog = "https://github.com/Geuthur/aa-corptools-dashboard/blob/master/CHANGELOG.md"
+urls.Discord = "https://discord.gg/WrHzA4rnxA"
 urls.Documentation = "https://github.com/Geuthur/aa-corptools-dashboard/blob/master/README.md"
 urls.Donations = "https://ko-fi.com/Geuthur"
 urls.Homepage = "https://github.com/Geuthur/aa-corptools-dashboard"
