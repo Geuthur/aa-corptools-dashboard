@@ -40,7 +40,6 @@ updates:
     groups:
       "NPM Dependencies":
         update-types:
-          - "major"
           - "minor"
           - "patch"
     schedule:
