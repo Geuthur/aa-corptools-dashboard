@@ -28,6 +28,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Changed
+
+- Add the fixed ESI package metadata `__esi_compatibility_date__` and `__operations__` (`GetStatus`) to `ct_dashboard/__init__.py`
+
 ### Fixed
 
 - Fixed `make coverage` exiting with 0 when tests failed. The reports are still created, and the target now exits with the status of the test run, or with the status of `coverage report` if the tests passed.

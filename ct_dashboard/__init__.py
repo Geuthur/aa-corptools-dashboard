@@ -7,3 +7,5 @@ __package_name__ = "aa-corptools-dashboard"
 
 __app_name_useragent__ = "AA-Corptools-Dashboard"
 __github_url__ = f"https://github.com/Geuthur/{__package_name__}"
+__esi_compatibility_date__ = "2026-08-18"
+__operations__ = ["GetStatus"]
