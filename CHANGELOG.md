@@ -34,7 +34,9 @@ Section Order:
 
 ### Removed
 
-- [REMOVED] Own copies of `add_character_to_user`, `add_new_token`, `add_permission_to_user` and the token helpers in `testdata/utils.py` (identical to the ones in `aa-evesde-factory`); `aa-evesde-factory` provides them. Only `create_user_from_evecharacter` stays, as it is specific to the JSON test data.
+- [REMOVED] Own copies of `add_character_to_user`, `add_new_token`, `add_permission_to_user` and the token helpers in `testdata/utils.py` (identical to the ones in `aa-evesde-factory`); `aa-evesde-factory` provides them.
+
+- [REMOVED] `load_allianceauth`, `allianceauth.json`, `create_user_from_evecharacter` and `load_characteraudit` (the fixed-ID loader) in `ct_dashboard/tests/testdata/`; the tests now use `UserMainFactory` (new, in `testdata/factory.py`) and `EveCharacterFactory` from `aa-evesde-factory`.
 
 ### Fixed
 
