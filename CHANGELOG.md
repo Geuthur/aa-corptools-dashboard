@@ -32,6 +32,10 @@ Section Order:
 
 - Add the fixed ESI package metadata `__esi_compatibility_date__` and `__operations__` (`GetStatus`) to `ct_dashboard/__init__.py`
 
+### Removed
+
+- [REMOVED] Own copies of `add_character_to_user`, `add_new_token`, `add_permission_to_user` and the token helpers in `testdata/utils.py` (identical to the ones in `aa-evesde-factory`); `aa-evesde-factory` provides them. Only `create_user_from_evecharacter` stays, as it is specific to the JSON test data.
+
 ### Fixed
 
 - Fixed `make coverage` exiting with 0 when tests failed. The reports are still created, and the target now exits with the status of the test run, or with the status of `coverage report` if the tests passed.
