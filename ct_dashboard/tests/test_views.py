@@ -1,3 +1,6 @@
+# Third Party
+from evesde_factory.utils import add_character_to_user
+
 # Django
 from django.http import HttpResponse
 from django.test import RequestFactory, TestCase
@@ -8,10 +11,7 @@ from allianceauth.eveonline.models import EveCharacter
 # AA Corptools Dashboard
 from ct_dashboard.tests.testdata.load_allianceauth import load_allianceauth
 from ct_dashboard.tests.testdata.load_characteraudit import load_characteraudit
-from ct_dashboard.tests.testdata.utils import (
-    add_character_to_user,
-    create_user_from_evecharacter,
-)
+from ct_dashboard.tests.testdata.utils import create_user_from_evecharacter
 from ct_dashboard.views import dashboard_corptools_check
 
 
