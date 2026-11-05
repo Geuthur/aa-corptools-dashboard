@@ -3,19 +3,18 @@ from unittest.mock import MagicMock
 
 # Django
 from django.http import HttpResponse
-from django.test import RequestFactory, TestCase
 
 # AA Corptools Dashboard
 from ct_dashboard.auth_hooks import CorptoolsDashboardHook, register_corptools_hook
+from ct_dashboard.tests import AuthTestCase
 from ct_dashboard.tests.testdata.factory import UserMainFactory
 from ct_dashboard.tests.testdata.load_characteraudit import create_characteraudit
 
 
-class TestCorptoolsDashboardAuthHooks(TestCase):
+class TestCorptoolsDashboardAuthHooks(AuthTestCase):
     @classmethod
     def setUpClass(cls) -> None:
         super().setUpClass()
-        cls.factory = RequestFactory()
         cls.user_without_permission = UserMainFactory(permissions=[])
         cls.user_with_ct_permission = UserMainFactory()
         for user in (cls.user_without_permission, cls.user_with_ct_permission):
