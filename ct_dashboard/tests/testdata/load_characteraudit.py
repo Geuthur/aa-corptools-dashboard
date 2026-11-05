@@ -1,4 +1,4 @@
-"""Generate AllianceAuth test objects from allianceauth.json."""
+"""Generate Corptools CharacterAudit test objects."""
 
 # Third Party
 from corptools.models import CharacterAudit
@@ -14,10 +14,3 @@ def create_characteraudit(eve_character: EveCharacter, **kwargs) -> CharacterAud
     obj = CharacterAudit(**params)
     obj.save()
     return obj
-
-
-def load_characteraudit():
-    CharacterAudit.objects.all().delete()
-    create_characteraudit(EveCharacter.objects.get(character_id=1001))
-    create_characteraudit(EveCharacter.objects.get(character_id=1002))
-    create_characteraudit(EveCharacter.objects.get(character_id=1003))

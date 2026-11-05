@@ -7,27 +7,19 @@ from django.test import RequestFactory, TestCase
 
 # AA Corptools Dashboard
 from ct_dashboard.auth_hooks import CorptoolsDashboardHook, register_corptools_hook
-from ct_dashboard.tests.testdata.load_allianceauth import load_allianceauth
-from ct_dashboard.tests.testdata.load_characteraudit import load_characteraudit
-from ct_dashboard.tests.testdata.utils import create_user_from_evecharacter
+from ct_dashboard.tests.testdata.factory import UserMainFactory
+from ct_dashboard.tests.testdata.load_characteraudit import create_characteraudit
 
 
 class TestCorptoolsDashboardAuthHooks(TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         super().setUpClass()
-        load_allianceauth()
-        load_characteraudit()
         cls.factory = RequestFactory()
-        cls.user_without_permission, cls.character_ownership = (
-            create_user_from_evecharacter(character_id=1002)
-        )
-        cls.user_with_ct_permission, cls.character_ownership = (
-            create_user_from_evecharacter(
-                character_id=1001,
-                permissions=["corptools.view_characteraudit"],
-            )
-        )
+        cls.user_without_permission = UserMainFactory(permissions=[])
+        cls.user_with_ct_permission = UserMainFactory()
+        for user in (cls.user_without_permission, cls.user_with_ct_permission):
+            create_characteraudit(user.profile.main_character)
 
     def test_render_returns_empty_string_for_user_without_permission(self):
         # given
