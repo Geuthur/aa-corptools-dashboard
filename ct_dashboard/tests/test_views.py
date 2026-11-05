@@ -4,19 +4,18 @@ from evesde_factory.utils import add_character_to_user
 
 # Django
 from django.http import HttpResponse
-from django.test import RequestFactory, TestCase
 
 # AA Corptools Dashboard
+from ct_dashboard.tests import AuthTestCase
 from ct_dashboard.tests.testdata.factory import UserMainFactory
 from ct_dashboard.tests.testdata.load_characteraudit import create_characteraudit
 from ct_dashboard.views import dashboard_corptools_check
 
 
-class DashboardCorptoolsCheckTest(TestCase):
+class DashboardCorptoolsCheckTest(AuthTestCase):
     @classmethod
     def setUpClass(cls) -> None:
         super().setUpClass()
-        cls.factory = RequestFactory()
         cls.user_without_permission = UserMainFactory(permissions=[])
         cls.user_with_ma_permission = UserMainFactory()
         for user in (cls.user_without_permission, cls.user_with_ma_permission):
