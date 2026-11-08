@@ -30,6 +30,8 @@ Section Order:
 
 ### Changed
 
+- CI: workflows aligned with the aa-example template: `release.yml` now attaches the build to the GitHub release, `autotester.yml` without Python 3.10
+- Dropped Python 3.10 (end of life): `requires-python` is now `>=3.11`, classifier and tox environment removed
 - Tests use the shared `AuthTestCase` (and `NoSocketsTestCase`) from `ct_dashboard/tests/__init__.py`, matching the other AA apps; tests no longer access the network
 - Add the fixed ESI package metadata `__esi_compatibility_date__` and `__operations__` (`GetStatus`) to `ct_dashboard/__init__.py`
 
