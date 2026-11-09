@@ -28,6 +28,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Added
+
+- Optional extra `tests-allianceauth-development` (test packages plus the Alliance Auth 6 pre-release) for the tox environment `allianceauth-development` and `make tox-tests-development`; a non-blocking CI job "AA Development" runs it on Python 3.13 and 3.14
+
 ### Changed
 
 - CI: workflows aligned with the aa-example template: `release.yml` now attaches the build to the GitHub release, `autotester.yml` without Python 3.10
