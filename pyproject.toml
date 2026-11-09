@@ -36,6 +36,12 @@ dependencies = [
     "allianceauth>=5.2",
     "allianceauth-corptools",
 ]
+optional-dependencies.tests-allianceauth-development = [
+    "aa-evesde-factory",
+    "allianceauth>=6.0.0a1,<7",
+    "coverage",
+    "factory-boy",
+]
 optional-dependencies.tests-allianceauth-latest = [
     "aa-evesde-factory",
     "coverage",
