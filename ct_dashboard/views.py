@@ -9,9 +9,6 @@ from django.utils.translation import gettext as _
 
 # Alliance Auth
 from allianceauth.authentication.models import CharacterOwnership
-from allianceauth.services.hooks import get_extension_logger
-
-logger = get_extension_logger(__name__)
 
 
 def dashboard_corptools_check(request):
