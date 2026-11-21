@@ -39,6 +39,8 @@ Section Order:
 
 ### Removed
 
+- [REMOVED] Eight empty stub modules in `ct_dashboard/` (`admin`, `app_settings`, `decorators`, `errors`, `forms`, `models`, `tasks`, `urls`); nothing imported them.
+
 - [REMOVED] Own copies of `add_character_to_user`, `add_new_token`, `add_permission_to_user` and the token helpers in `testdata/utils.py` (identical to the ones in `aa-evesde-factory`); `aa-evesde-factory` provides them.
 
 - [REMOVED] `load_allianceauth`, `allianceauth.json`, `create_user_from_evecharacter` and `load_characteraudit` (the fixed-ID loader) in `ct_dashboard/tests/testdata/`; the tests now use `UserMainFactory` (new, in `testdata/factory.py`) and `EveCharacterFactory` from `aa-evesde-factory`.
