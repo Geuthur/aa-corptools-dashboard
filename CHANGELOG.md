@@ -34,6 +34,8 @@ Section Order:
 
 ### Changed
 
+- [CHANGE] `stylelint` 18 and `stylelint-config-standard` 41; the pre-commit hook passes its environment as `--config-basedir` because stylelint 18 no longer resolves `extends` from global `node_modules`
+- [CHANGE] Node 26 (LTS) in the CI workflow and pre-commit; `globals` and the other dev dependencies updated within their major versions (`stylelint` stays on 17, `stylelint-config-standard` on 40)
 - [CHANGE] Dev dependency `eslint` bumped to `^10.15.0`, which brings `minimatch` 11 (fixes the Dependabot alert for `minimatch`)
 - [CHANGE] Add the `AppLogger` (prefix `[Corptools Dashboard]`) and the single shared `logger` to `ct_dashboard/providers.py`, matching the aa-example template. Modules import it with `from ct_dashboard.providers import logger`. The unused module logger in `views.py` is removed.
 - CI: workflows aligned with the aa-example template: `release.yml` now attaches the build to the GitHub release, `autotester.yml` without Python 3.10
@@ -42,6 +44,8 @@ Section Order:
 - Add the fixed ESI package metadata `__esi_compatibility_date__` and `__operations__` (`GetStatus`) to `ct_dashboard/__init__.py`
 
 ### Removed
+
+- [REMOVED] Eight empty stub modules in `ct_dashboard/` (`admin`, `app_settings`, `decorators`, `errors`, `forms`, `models`, `tasks`, `urls`); nothing imported them.
 
 - [REMOVED] Own copies of `add_character_to_user`, `add_new_token`, `add_permission_to_user` and the token helpers in `testdata/utils.py` (identical to the ones in `aa-evesde-factory`); `aa-evesde-factory` provides them.
 
